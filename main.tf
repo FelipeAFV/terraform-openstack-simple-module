@@ -4,5 +4,7 @@ resource "openstack_compute_instance_v2" "terrakube_vm" {
   flavor_id       = "m1.medium"
   security_groups = ["default"]
 
-
+  network {
+    name = "PUBLIC"
+  }
 }
